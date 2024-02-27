@@ -1,6 +1,7 @@
 pipeline {
-    agent any
-
+    agent { 
+        label 'local'
+    }
     environment {
         scannerHome = tool 'sonarqube'
     }
