@@ -10,7 +10,12 @@ pipeline {
             steps {
                 script {
                     withSonarQubeEnv('sonarqube') {
-                        sh "${scannerHome}/bin/sonar-scanner"
+                        sh """
+                            ${scannerHome}/bin/sonar-scanner \
+                            -Dsonar.projectKey=jenkins-node \
+                            -Dsonar.sources=src \
+                            -Dsonar.host.url=http://192.168.0.106:9000
+                        """
                     }
                 }
             }
