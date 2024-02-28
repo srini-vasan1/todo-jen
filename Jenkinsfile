@@ -25,7 +25,7 @@ pipeline {
                             ${scannerHome}/bin/sonar-scanner \
                                 -Dsonar.projectKey=second \
                                 -Dsonar.sources=. \
-                                -Dsonar.host.url=http://192.168.0.106:9000
+                                -Dsonar.host.url=http://192.168.0.100:9000
                         """
                     }
                 }
